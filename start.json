@@ -5,7 +5,8 @@
       "params": {
         "env": {
           "HF_HOME": "./huggingface",
-          "ALLOW_FILE_UPLOAD": "True"
+          "ALLOW_FILE_UPLOAD": "True",
+          "COQUI_TOS_AGREED": "1"
         }
       }
     },
