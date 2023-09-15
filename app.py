@@ -9,7 +9,7 @@ elif torch.backends.mps.is_available():
 else:
     device = "cpu"
 
-torch.set_default_device(device)
+#torch.set_default_device(device)
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v1")
 tts.to(device)
 
