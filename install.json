@@ -1,0 +1,97 @@
+{
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? '' : 'brew install mecab'}}"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env"
+      }
+    },
+    {
+      "method": "shell.start",
+      "params": {
+        "env": {
+          "HF_HOME": "./huggingface"
+        }
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate env' : 'source env/bin/activate env'}}",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "npx --yes torchcraft@0.0.14",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install -r torchcraft.txt",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install gradio huggingface_hub",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install -r requirements.txt",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "input",
+      "params": {
+        "title": "Install Success",
+        "description": "Go back to the dashboard and launch the app!"
+      }
+    },
+    {
+      "method": "browser.open",
+      "params": {
+        "uri": "/?selected=XTTS"
+      }
+    }
+  ]
+}
