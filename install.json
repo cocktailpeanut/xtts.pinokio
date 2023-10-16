@@ -1,4 +1,9 @@
 {
+  "requires": [
+    { "type": "conda", "name": "ffmpeg", "args": "-c conda-forge" },
+    { "platform": "darwin", "name": "brew" },
+    { "platform": "darwin", "type": "brew", "name": "mecab" }
+  ],
   "run": [
     {
       "method": "shell.run",
