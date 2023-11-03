@@ -64,7 +64,7 @@
     {
       "method": "shell.enter",
       "params": {
-        "message": "pip install gradio huggingface_hub",
+        "message": "pip install gradio==3.50.2",
         "on": [
           {
             "event": null,
