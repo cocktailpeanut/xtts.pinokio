@@ -10,7 +10,7 @@ else:
     device = "cpu"
 
 torch.set_default_device(device)
-tts = TTS("tts_models/multilingual/multi-dataset/xtts_v1")
+tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
 tts.to(device)
 
 def predict(prompt, language, audio_file_pth, agree):
