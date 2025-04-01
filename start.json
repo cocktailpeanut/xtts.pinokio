@@ -6,6 +6,7 @@
       "params": {
         "venv": "env",
         "env": {
+          "XDG_DATA_HOME": "./cache/HF_HOME/hub",
           "ALLOW_FILE_UPLOAD": "True",
           "COQUI_TOS_AGREED": "1"
         },
