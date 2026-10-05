@@ -11,7 +11,7 @@
       "venv": "env",
       "venv_python": "3.11",
       "message": [
-        "uv pip install gradio==4.44.0 pydantic==2.10.6",
+        "uv pip install gradio==4.44.0 pydantic==2.10.6 \"starlette<1\"",
         "uv pip install -r requirements.txt"
       ]
     }
